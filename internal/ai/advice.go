@@ -18,5 +18,5 @@ func (c *AIClient) GenerateLegalAdvice(prompt string) (string, error) {
 		return "", err
 	}
 
-	return result.Text(), nil
+	return result.Candidates[0].Content.Parts[0].Text, nil
 }
