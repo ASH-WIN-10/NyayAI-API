@@ -20,7 +20,6 @@ func (c *AIClient) GenerateLegalAdvice(prompt string) (string, error) {
 	prompt = prompt + "\n\nDo not mention their region or country name unless explicitly asked like (In India, In USA etc.). "
 
 	config := &genai.GenerateContentConfig{
-		MaxOutputTokens:   500,
 		Temperature:       &temperature,
 		SystemInstruction: genai.NewContentFromText(systemInstruction, ""),
 	}
